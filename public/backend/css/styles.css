@@ -4,8 +4,8 @@
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
-  --first-color: #03BDA5;
-  --first-color-alt: #00a5a1;
+  --first-color: #FED923;
+  --first-color-alt: #c7a328;
   --title-color: #161212;
   --text-color: #5B5757;
   --text-color-light: #8F8A8A;
@@ -779,7 +779,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: var(--body-color);
+  color: var(--title-color);
   font-size: 26px;
 }
 
@@ -791,13 +791,13 @@ img {
   bottom: -10px;
   width: 25px;
   height: 4px;
-  background: var(--body-color);
+  background: var(--title-color);
 }
 
 .app-contact {
   margin-top: auto;
   font-size: var(--small-font-size);
-  color: var(--body-color);
+  color: var(--title-color);
 }
 
 .app-form-group {
@@ -818,8 +818,8 @@ img {
   padding: 10px 0;
   background: none;
   border: none;
-  border-bottom: 1px solid var(--body-color);
-  color: #ddd;
+  border-bottom: 1px solid var(--title-color);
+  color: var(--title-color);
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
@@ -827,14 +827,14 @@ img {
 }
 
 .app-form-control::placeholder {
-  color: var(--body-color);
+  color: var(--title-color);
   outline: none;
 }
 
 .app-form-button {
   background: none;
   border: none;
-  color: var(--body-color);
+  color: var(--title-color);
   font-size: 14px;
   cursor: pointer;
   outline: none;
@@ -842,7 +842,7 @@ img {
 
 .disabled{
   position: absolute;
-  color: white;
+  color: grey;
   top: 43.8%;
 }
 .disabled-place{

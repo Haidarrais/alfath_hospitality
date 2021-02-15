@@ -9,7 +9,7 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="{{ url('backend/css/styles.css') }}">
 
-        <title>Syariahrooms Hospotality</title>
+        <title>Alfath Hospotality</title>
     </head>
     <body>
         <!--========== SCROLL TOP ==========-->
@@ -22,7 +22,7 @@
             <nav class="nav bd-container">
                 <div class="nav__brand">
                     <img src="{{ url('backend/img/logo.png') }}" alt="" class="logo-img">
-                    <a href="#" class="nav__logo">Syariahrooms <br> Hospotality</a>
+                    <a href="#" class="nav__logo">Alfath <br> Hospotality</a>
                 </div>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -46,7 +46,7 @@
             <section class="home" id="home">
                 <div class="home__container bd-container bd-grid bd-grid__home">
                     <div class="home__img">
-                        <img src="{{ url('backend/img/home.png') }}" alt="">
+                        <img src="{{ url('backend/img/home.svg') }}" alt="">
                     </div>
 
                     <div class="home__data">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!--========== PROMO ==========-->
             <section class="promo section bd-container" id="promo">
                 <h2 class="section-title">Program & Promo</h2>
@@ -158,28 +158,28 @@
                         <form  id="sendMessage" class="app-form" action="{{route('kirim')}}" method="POST">
                             @csrf
                           <div class="app-form-group">
-                            <input 
-                            type="text" 
-                            class="app-form-control" 
+                            <input
+                            type="text"
+                            class="app-form-control"
                             name="name"
-                            value="{{ old('name') }}" 
+                            value="{{ old('name') }}"
                             placeholder="NAME">
                           </div>
                           <div class="app-form-group">
                             <div class="disabled">+62</div>
-                            <input 
-                            type="tel" 
+                            <input
+                            type="tel"
                             class="app-form-control disabled-place"
-                            name="phoneNumber" 
+                            name="phoneNumber"
                             value='{{old('phoneNumber')}}'
                             placeholder="PHONE NUMBER" >
                           </div>
                           <div class="app-form-group message">
-                            <input 
+                            <input
                             type="text"
                             class="app-form-control"
-                            name="message" 
-                            value="{{ old('message') }}" 
+                            name="message"
+                            value="{{ old('message') }}"
                             placeholder="message"
                             style="text-transform: unset"
                             >
@@ -188,8 +188,8 @@
                               {{$message}}
                           @enderror</div>
                           <div class="app-form-group buttons">
-                            <button class="app-form-button" 
-                            type="submit" 
+                            <button class="app-form-button"
+                            type="submit"
                             >SEND</button>
                           </div>
                         </form>
@@ -205,7 +205,7 @@
             <div class="footer__container bd-container bd-grid">
                 <div class="footer__content">
                     <h3 class="footer__title">
-                        <a href="#" class="footer__logo">Syariahrooms</a>
+                        <a href="#" class="footer__logo">Alfath</a>
                     </h3>
                     <p class="footer__description">Find the convenience as your sweet home has with #staysyariah</p>
                 </div>
@@ -252,15 +252,15 @@
             <div class="alert alert-success">
                 <script>
                     swal(`Thankyou {{ session()->get('user') }}!`,"Your message is sent to us","success");
-                </script>   
+                </script>
             </div>
        @endif
        @if(session()->has('errorMessage'))
            <div class="alert alert-fail">
                <script>
                    swal(`{{ session()->get('errorMessage') }}!`,"","error");
-               </script>   
-           </div>         
+               </script>
+           </div>
        @endif
     </body>
 </html>
